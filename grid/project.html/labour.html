@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Labour Booking Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0ee812;
+        }
+
+        header {
+            background: #e70909;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background: #037cf5;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #27ae60;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #219150;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Labour Booking Portal</h1>
+    <p>Book Trusted Labours for Construction, Farm & General Work</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#register">Labour Register</a>
+    <a href="#booking">Book Labour</a>
+</nav>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>
+        Our Labour Booking Portal connects skilled construction workers, farm labours,
+        and general workers with clients who need reliable manpower.
+        We provide trusted and verified labours for house building,
+        farming activities, and other daily works.
+    </p>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <ul>
+        <li>🏗 Construction Labour (Masons, Helpers, Painters)</li>
+        <li>🌾 Farm Labour (Harvesting, Planting, Irrigation Work)</li>
+        <li>🛠 General Labour (Loading, Cleaning, Shifting)</li>
+    </ul>
+</section>
+
+<section id="register">
+    <h2>Labour Registration</h2>
+    <form onsubmit="return registerLabour()">
+        <input type="text" id="lname" placeholder="Full Name" required>
+        <input type="tel" id="lphone" placeholder="Phone Number" required>
+        
+        <select id="ltype" required>
+            <option value="">Select Work Type</option>
+            <option>Construction Labour</option>
+            <option>Farm Labour</option>
+            <option>General Labour</option>
+        </select>
+
+        <input type="text" id="lexp" placeholder="Experience (in years)" required>
+        <button type="submit">Register</button>
+    </form>
+</section>
+
+<section id="booking">
+    <h2>Client Booking Form</h2>
+    <form onsubmit="return bookLabour()">
+        <input type="text" id="cname" placeholder="Client Name" required>
+        <input type="tel" id="cphone" placeholder="Phone Number" required>
+
+        <select id="ctype" required>
+            <option value="">Select Labour Type Needed</option>
+            <option>Construction Labour</option>
+            <option>Farm Labour</option>
+            <option>General Labour</option>
+        </select>
+
+        <textarea id="details" placeholder="Work Details" required></textarea>
+
+        <button type="submit">Book Now</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Labour Booking Portal | All Rights Reserved</p>
+</footer>
+
+<script>
+    function registerLabour() {
+        alert("Labour Registered Successfully!");
+        return false;
+    }
+
+    function bookLabour() {
+        alert("Labour Booking Request Submitted Successfully!");
+        return false;
+    }
+</script>
+
+</body>
+</html>
